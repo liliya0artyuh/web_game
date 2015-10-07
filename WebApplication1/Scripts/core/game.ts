@@ -4,10 +4,10 @@
 /// <reference path="../typings/easeljs/easeljs.d.ts" />
 /// <reference path="../typings/tweenjs/tweenjs.d.ts" />
 /// <reference path="../typings/soundjs/soundjs.d.ts" />
-/// <reference path="../objects/label.ts" />
+
 
 /// <reference path="../typings/preloadjs/preloadjs.d.ts" />
-
+/// <reference path="../objects/label.ts" />
 
 
 // Global Game Framework Variables
@@ -17,8 +17,6 @@ var stage: createjs.Stage;
 // Game variables
 var helloLabel: objects.Label;
 var goodbyeLabel: objects.Label;
-
-$(document).ready;
 
 
 function init(): void {
@@ -34,7 +32,6 @@ function init(): void {
 // Main Game Loop
 function gameLoop(event: createjs.Event): void {
     stage.update(); // redraw/refresh stage every frame
-
 }
 
 
@@ -43,6 +40,6 @@ function main(): void {
     helloLabel = new objects.Label("Hello World", "60px Consolas", "#000000", 320, 240);
     stage.addChild(helloLabel); // add label to the stage
 
-    helloLabel = new objects.Label(" Good Bye!", "40px Consolas", "#000000", 320, 340);
+    goodbyeLabel = new objects.Label(" Good Bye!", "40px Consolas", "#000000", 320, 340);
     stage.addChild(goodbyeLabel);
 }
